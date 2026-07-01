@@ -1,4 +1,4 @@
-# encapsulate,cohesion,decouple,inheritance
+# encapsulate,cohesion,decouple,inheritance,polymorphism
 
 """
 类的继承演示 - 汽车类体系
