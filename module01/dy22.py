@@ -2,7 +2,7 @@
 #     print(e)
 #
 #
-# #列表推导式
+# #列表推导式 列表推导式 列表推导式 列表推导式
 # num=[e**2 for e in range(1, 21)]
 # print(num)
 from dy20 import num_list1

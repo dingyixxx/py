@@ -1,5 +1,7 @@
 from module01.dy35 import calc_data
 
+# __all__=["log_separator1","log_separator2","PI"]
+
 print(calc_data(1,name="dy121"))
 
 # 常量(不会发生变化的数据；常量的名称为全部大写)
