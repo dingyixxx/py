@@ -13,13 +13,13 @@ dict1["emai"]="dingyixxx@126.com"
 
 # del  dict1 ["emai"]
 # dict1.pop("emai")
-print(dict1.get("emai"))
-
-for key in dict1.keys():
-    print(key)
-
-for value in dict1.values():
-    print(value)
+# print(dict1.get("emai"))
+#
+# for key in dict1.keys():
+#     print(key)
+#
+# for value in dict1.values():
+#     print(value)
 
 for k,v in dict1.items():
     print(k)

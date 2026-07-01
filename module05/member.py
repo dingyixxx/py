@@ -39,8 +39,8 @@ class Member(ABC):
     @abstractmethod
     def get_max_books(self) -> int:
         # print("get_max_books-父类")
-        # return  11
-        pass
+        return  11 #只要有抽象方法，抽象类就不能被实例化
+        # pass
 
     def get_password(self):
         return self.__password
@@ -49,11 +49,14 @@ class Member(ABC):
         return self.__borrowed_books
 
 
+
 # 普通会员类
 class NormalMember(Member):
     # pass
     def get_max_books(self) -> int:
         return 3
+    def __repr__(self):
+        return f"NormalMember({self.member_id}, {self.name}, {self.get_password()}, {self.get_borrowed_books()})"
 
 
 # VIP会员类
@@ -64,6 +67,8 @@ class VIPMember(Member):
 
     def get_max_books(self) -> int:
         return 6 + self.vip_level
+    def __repr__(self):
+        return f"VIPMember({self.member_id}, {self.name}, {self.get_password()}, {self.vip_level}, {self.get_borrowed_books()})"
 
 
 # 抽象类，只能被继承，不能被实例化。作用就是规定子类必须要实现哪些方式，强制子类必须遵守统一的代码规范。
@@ -77,7 +82,7 @@ class VIPMember(Member):
 # # 子类必须要实现所有的抽象方法
 
 
-# member=Member("N002","肖志博","754673XzbMima!")
+member=Member("N002","肖志博","754673XzbMima!") #TypeError: Can't instantiate abstract class Member without an implementation for abstract method 'get_max_books'
 # #但是如果Member类继承了ABC（如果内部没有抽象方法的话），也可以直接被实例化
 # # 如果抽象类内部，有抽象方法，则不能被实例化
 # print(member.__dict__)
